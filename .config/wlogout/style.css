@@ -1,0 +1,85 @@
+* {
+    font-family: "CommitMono Nerd Font Propo";
+    font-size: 17px;
+    font-weight: bold;
+    color: #1e1e2e;
+    box-shadow: none;
+}
+
+window {
+    background-color: rgba(30, 30, 46, 0.8);
+}
+
+window > box {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: #313244;
+    border-radius: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32%;
+    min-width: 100px;
+    transition: all 0.25s ease-in-out;
+    padding: 25px;
+    border: 2px solid transparent;
+}
+
+button:active,
+button:hover {
+    background-size: 45%;
+    text-shadow: 0 0 1px #1e1e2e;
+}
+
+#lock {
+    background-image: image(url("assets/lock.png"));
+    background-color: #89b4fa;
+    color: #1e1e2e;
+}
+
+#lock:hover {
+    background-color: #74c7ec;
+}
+
+#logout {
+    background-image: image(url("assets/logout.png"));
+    background-color: #cba6f7;
+    color: #1e1e2e;
+}
+
+#logout:hover {
+    background-color: #f5c2e7;
+}
+
+#suspend {
+    background-image: image(url("assets/suspend.png"));
+    background-color: #89dceb;
+    color: #1e1e2e;
+}
+
+#suspend:hover {
+    background-color: #74c7ec;
+}
+
+#shutdown {
+    background-image: image(url("assets/shutdown.png"));
+    background-color: #f38ba8;
+    color: #1e1e2e;
+}
+
+#shutdown:hover {
+    background-color: #f7768e;
+}
+
+#reboot {
+    background-image: image(url("assets/reboot.png"));
+    background-color: #fab387;
+    color: #1e1e2e;
+}
+
+#reboot:hover {
+    background-color: #f9e2af;
+}

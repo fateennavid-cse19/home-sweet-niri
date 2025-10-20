@@ -1,0 +1,21 @@
+
+//@theme "/usr/share/rofi/themes/android_notification.rasi"
+
+//@theme "/home/fnavid/.local/share/rofi/themes/rounded-template.rasi"
+
+//@theme "/usr/share/rofi/themes/android_notification.rasi"
+
+//@theme "/home/fnavid/.local/share/rofi/themes/rounded-template.rasi"
+
+//@theme "/usr/share/rofi/themes/android_notification.rasi"
+
+@theme "/home/fnavid/.local/share/rofi/themes/rounded-template.rasi"
+//@theme "/home/fnavid/.config/rofi/emoji-theme/emoji-theme.rasi"
+
+configuration {
+    // Add 'emoji' to the comma-separated list of modes
+    modi: "window,drun,run,ssh,emoji";
+    
+    // Ensure icons are displayed
+    show-icons: true;
+}

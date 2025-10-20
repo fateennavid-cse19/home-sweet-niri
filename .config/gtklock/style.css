@@ -1,0 +1,245 @@
+window {
+    background-image: url("file:///tmp/gtklock-blurred-wallpaper.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-position: ; */
+    /* background-color: #1e1e2e; */
+}
+
+/* Main container */
+#window-box {
+    /* background-color: rgba(30, 30, 46, 0.9); */
+    background-color: #313244;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+/* Clock Module */
+#clock-label {
+    font-size: 64px;
+    font-weight: 600;
+    color: #cdd6f4;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    padding: 0;
+    margin: 0;
+    /* color: transparent; */
+    /* font-size: 0px; */
+}
+
+#date-label {
+    /* font-size: 20px; */
+    /* color: #bac2de; */
+    /* padding: 4px 12px; */
+    /* border-radius: 10px; */
+    font-size: 0px;
+    color: transparent;
+    min-height: 0px;
+    min-width: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Label and field */
+#input-label {
+    font-size: 16px;
+    color: #b4befe;
+    margin-bottom: 2px;
+}
+
+#input-field {
+    background-color: #1e1e2e;
+    color: #f5e0dc;
+    border: 1px solid #b4befe;
+    border-radius: 10px;
+    padding: 6px 10px;
+    font-size: 15px;
+}
+
+/* Messages */
+#warning-label {
+    color: #f9e2af;
+    font-style: italic;
+    padding: 2px 8px;
+    border-radius: 8px;
+    /* background-color: rgba(250, 200, 100, 0.1); */
+    background: transparent;
+}
+
+#error-label {
+    color: #f38ba8;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 8px;
+    /* background-color: rgba(243, 139, 168, 0.1); */
+    background: transparent;
+}
+
+#message-box {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+/* Unlock button */
+#unlock-button {
+    background-color: #a6e3a1;
+    color: #1e1e2e;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 16px;
+    min-width: 100px;
+    margin-top: 10px;
+    border: none;
+}
+
+#unlock-button:hover {
+    background-color: #94d28b;
+}
+
+/* Powerbar module */
+#powerbar-box {
+    margin: 12px;
+}
+
+#poweroff-button,
+#reboot-button,
+#suspend-button,
+#logout-button {
+    padding: 6px 14px;
+    font-size: 14px;
+    min-width: 90px;
+    min-height: 34px;
+    border-radius: 999px;
+    color: #1e1e2e;
+    border: none;
+    margin: 4px;
+    background-clip: padding-box;
+}
+
+/* Individual colors */
+#poweroff-button {
+    background-color: #f38ba8;
+}
+
+#poweroff-button:hover {
+    background-color: #f7768e;
+}
+
+#reboot-button {
+    background-color: #fab387;
+}
+
+#reboot-button:hover {
+    background-color: #f9e2af;
+}
+
+#suspend-button {
+    background-color: #89b4fa;
+}
+
+#suspend-button:hover {
+    background-color: #74c7ec;
+}
+
+#logout-button {
+    background-color: #cba6f7;
+}
+
+#logout-button:hover {
+    background-color: #f5c2e7;
+}
+
+
+/* Playerctl Revealer Box */
+#playerctl-revealer {
+    background-color: #1e1e2e;
+    /* Catppuccin Mocha base with transparency */
+    border-radius: 12px;
+    padding: 12px;
+    margin: 10px;
+}
+
+
+
+/* Album Art */
+
+/*
+
+#album-art {
+    border-radius: 10px;
+    min-width: 64px;
+    min-height: 64px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+*/
+
+
+
+/* Media Labels */
+
+/*
+#title-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1e1e2e;
+    padding-bottom: 2px;
+}
+
+#album-label {
+    font-size: 14px;
+    color: #a6adc8;
+    padding-bottom: 1px;
+}
+
+#artist-label {
+    font-size: 13px;
+    font-style: italic;
+    color: #1e1e2e;
+}
+
+*/
+
+/* Playback Buttons */
+
+/* 
+#previous-button,
+#play-pause-button,
+#next-button {
+    background-color: #313244;
+    border-radius: 10px;
+    padding: 6px 10px;
+    margin: 0 3px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+*/
+
+/* Hover State for Buttons */
+
+/*
+#previous-button:hover,
+#next-button:hover {
+    background-color: #45475a;
+}
+
+*/
+
+/* Play/Pause Button - Accent Blue */
+
+/*
+
+#play-pause-button {
+    background-color: #74c7ec;
+    color: #1e1e2e;
+}
+
+#play-pause-button:hover {
+    background-color: #74c7ec;
+}
+
+*/
+

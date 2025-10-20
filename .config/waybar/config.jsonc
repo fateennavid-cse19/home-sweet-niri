@@ -1,0 +1,205 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 36,
+    "margin-top": 3,
+    "margin-left": 2,
+    "margin-right": 2,
+    "margin-bottom": 1,
+    "reload_style_on_change": true,
+    "spacing": 11,
+    "modules-left": [
+        "custom/launcher",
+        "niri/workspaces",
+        "mpris"
+    ],
+    "modules-center": [ 
+        "clock",
+        "custom/notification"
+    ],
+    "modules-right": [
+        "privacy",
+        "custom/clipboard",
+        "pulseaudio",
+        "network",
+        "power-profiles-daemon",
+        "battery",
+        "tray",
+        "custom/power"
+    ],
+
+    
+    "niri/workspaces": {
+        "format": "{icon}",
+    },
+    "mpris": {
+        "player-icons": {
+            "default": "🎵"
+        },
+        "format": "⏸ {dynamic}",
+        "format-paused": "▶ {dynamic}",
+        "format-stopped": "⏹ Stopped",
+        "interval": 1,
+        "max-length": 70
+    },
+
+    "custom/notification": {
+        "tooltip-format": "Notifications",
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "󰂚",
+            "dnd-notification": "󱏧<span foreground='#1e1e2e'><sup></sup></span>",
+            "dnd-none": "󱏧",
+            "inhibited-notification": "󰂚<span foreground='#1e1e2e'><sup></sup></span>",
+            "inhibited-none": "󰂚",
+            "dnd-inhibited-notification": "<span foreground='#1e1e2e'><sup></sup></span>",
+            "dnd-inhibited-none": "󱏧"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true,
+    },
+    
+    
+      "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "timezone": "Asia/Dhaka",
+        "format": "󰥔 {:%R}",
+        // "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "tooltip-format":"<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "󰃭 {:%A %Y-%m-%d}",
+        "interval": 60
+    },
+   
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon}  {format_source}",
+        "format-bluetooth": "{volume}%  {icon} {format_source}  ",
+        "format-bluetooth-muted": " {icon} {format_source}  ",
+        "format-muted": " {format_source}  ",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "custom/launcher": {
+        "format": "",
+        // "format": "",
+        "on-click": "pkill fuzzel || fuzzel",
+        "tooltip-format": "Launcher"
+    },
+    "custom/clipboard": {
+        "format": "󰅇",
+        "on-click": "pkill fuzzel || ~/bin/cliphist-fuzzel-img",
+        "tooltip-format": "Clipboard"
+    },
+
+    "custom/screenrecording": {
+        "format": "󰻂",
+        "tooltip-format": "Screen Recording",
+        "on-click": "pkill fuzzel || screen-recording",
+        "on-click-right": "pkill -INT wf-recorder"
+    },
+    "custom/power": {
+        "format": "⏼",
+        "tooltip": false,
+        "on-click": "wlogout -c 15 -b 5 -T 350 -B 350 -L 100 -R 100"
+    },
+        
+     "privacy": {
+        "icon-spacing": 10,
+        "icon-size": 16,
+        "transition-duration": 250,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-out",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            }
+        ],
+        "ignore-monitor": true,
+        "ignore": [
+            {
+                "type": "audio-in",
+                "name": "cava"
+            },
+            {
+                "type": "screenshare",
+                "name": "obs"
+            }
+        ]
+    },
+    "group/misc": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/clipboard",
+            "custom/vkeyboard",
+            "custom/screenrecording"
+        ]
+    },
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "on-click": "alacritty -e nmtui"
+    },
+
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced":  "",
+        "power-saver": ""
+      }
+    },
+    
+    
+}
