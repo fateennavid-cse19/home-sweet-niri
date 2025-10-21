@@ -116,7 +116,7 @@
     "custom/launcher": {
         "format": "",
         // "format": "",
-        "on-click": "pkill fuzzel || fuzzel",
+        "on-click": "rofi -show drun -config ~/.config/rofi/launcher-theme/launcher-theme.rasi",
         "tooltip-format": "Launcher"
     },
     "custom/clipboard": {

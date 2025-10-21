@@ -93,7 +93,7 @@ for fName in "${bgnames[@]}"; do
 done
 
 # Use simplified Rofi call since keybind is used (no need for complex config handling)
-selected=$(echo -en "${strrr}" | rofi -dmenu -show-icons -p "Select Wallpaper" )
+selected=$(echo -en "${strrr}" | rofi -dmenu -show-icons -p "Select Wallpaper" -theme "$USER_HOME/.config/rofi/wallpaper-theme/rounded-template.rasi" )
 
 
 # Check if a wallpaper was selected
