@@ -121,7 +121,7 @@
     },
     "custom/clipboard": {
         "format": "󰅇",
-        "on-click": "pkill fuzzel || ~/bin/cliphist-fuzzel-img",
+        "on-click": "~/bin/rofi-clipboard.sh",
         "tooltip-format": "Clipboard"
     },
 

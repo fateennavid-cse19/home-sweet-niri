@@ -1,0 +1,76 @@
+/* EMERALD EMOJI THEME */
+
+/* 1. Import Colors */
+@theme "rounded-catppuccin-mocha.rasi" 
+
+/* 2. Global Settings (Kept from rounded-template) */
+* {
+    font: "SpaceMono Nerd Font Propo 12";
+    background-color: transparent;
+    text-color: @fg0;
+    margin: 0px;
+    padding: 0px;
+    spacing: 0px;
+}
+
+/* 3. Window Settings (Kept from rounded-template) */
+window {
+    location: north;
+    y-offset: calc(50% - 176px);
+    width: 480;
+    border-radius: 24px;
+    background-color: @bg0;
+    minimum-height: 300px;
+}
+
+/* 4. Inputbar/Mainbox (Kept) */
+mainbox { padding: 12px; }
+inputbar {
+    background-color: @bg1;
+    border-radius: 16px;
+    padding: 8px 16px;
+    spacing: 8px;
+    children: [ prompt, entry ];
+}
+prompt { text-color: @fg2; }
+entry { placeholder: "Search"; placeholder-color: @fg3; }
+
+/* 5. LIST VIEW (CRITICAL: REVERT TO VERTICAL) */
+listview {
+    background-color: transparent;
+    margin: 12px 0 0;
+    lines: 8;      /* Standard vertical lines */
+    columns: 1;    /* CRITICAL: Back to single column */
+    height: 320px;
+}
+
+/* 6. ELEMENT (CRITICAL: REVERT TO HORIZONTAL) */
+element {
+    padding: 8px 16px;
+    spacing: 8px;
+    border-radius: 16px;
+    orientation: horizontal; /* CRITICAL: Back to horizontal (text next to icon) */
+}
+
+/* 7. Icon/Text (CRITICAL: Revert icon size) */
+element-icon {
+    size: 1em; /* Small size, perfect for emojis */
+    vertical-align: 0.5;
+    padding-right: 8px;
+}
+
+element-text { text-color: inherit; }
+
+/* 8. Colors (Kept) */
+element selected normal, element selected active {
+    background-color: #f5c2e7;
+   text-color: @bg0; /* <-- NEW: Use the dark foreground color for selected text */
+}
+
+configuration {
+    // Add 'emoji' to the comma-separated list of modes
+    modi: "window,drun,run,ssh,emoji";
+    
+    // Ensure icons are displayed
+    show-icons: true;
+}
