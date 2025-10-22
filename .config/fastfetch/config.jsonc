@@ -1,0 +1,139 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  
+  "display": {
+        "separator": " "
+    },
+  
+  "modules": [
+    "title",
+    {
+            "type": "custom",
+            "format": "┌──────────────────────────────────────────────┐"
+    },
+    {
+            "type": "os",
+            "key": " ╭─ ",
+            "keyColor": "green"
+    },
+    {
+            "type": "kernel",
+            "key": " ├─ ",
+            "format": "{1} {2}",
+            "keyColor": "green"
+     },
+     {
+            "type": "packages",
+            "key": " ├─󰏖 ",
+            "keyColor": "green"
+     },
+    {
+      "type": "uptime",
+      "key": " ├─󰅐",
+      "text": "echo $(( ($(date +%s) - $(stat -c %W /)) / 86400 )) days",
+      "keyColor": "green"
+    },
+    /* Insert your custom OS age commands here */
+    {
+      "type": "command",
+      "key": " ├─󰅐",
+      "text": "echo $(( ($(date +%s) - $(stat -c %W /)) / 86400 )) days",
+      "keyColor": "green"
+    },
+    {
+            "type": "shell",
+            "key": " ├─ ",
+            "keyColor": "green"
+     },
+    {
+      "type": "command",
+      "key": " ╰─🎁",
+      
+      "text": "birth_install=$(stat -c %W /); date -d @$birth_install '+%d %b %Y'",
+      "keyColor": "green"
+    },
+    
+    {
+            "type": "custom",
+            "format": "└──────────────────────────────────────────────┘"
+        },
+    "break",
+    
+    {
+            "type": "custom",
+            "format": "┌──────────────────────────────────────────────┐"
+    },
+    {
+            "type": "host",
+            "key": " ╭─󰧨 ",
+            "keyColor": "blue"
+    },
+    {
+            "type": "cpu",
+            "key": " ├─󰻠 ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "gpu",
+            "key": " ├─󰍛 ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "meomory",
+            "key": " ├─󰍛 ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "swap",
+            "key": " ├─󰍛 ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "disk",
+            "key": " ├─󰍛 ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "battery",
+            "key": " ├─🔋 ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "poweradapter",
+            "key": " ├─🔋 ",
+            "keyColor": "blue"
+        },
+        
+    {
+            "type": "display",
+            "key": " ├─󰧨 ",
+            "keyColor": "blue"
+    },
+    {
+            "type": "de",
+            "key": " ╰─ ",
+            "keyColor": "blue"
+    },
+    {
+            "type": "wm",
+            "key": " ╰─  ",
+            "keyColor": "blue"
+    },
+    {
+            "type": "wmtheme",
+            "key": " ╰─  ",
+            "keyColor": "blue"
+    },
+    {
+            "type": "custom",
+            "format": "└──────────────────────────────────────────────┘"
+    },
+    
+    "break",
+    
+    {
+            "type": "colors",
+            "symbol": "circle"
+        },
+  ]
+}
