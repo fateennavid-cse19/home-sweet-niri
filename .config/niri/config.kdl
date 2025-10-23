@@ -38,7 +38,7 @@ input {
         natural-scroll
         // accel-speed 0.2
         // accel-profile "flat"
-        // scroll-method "two-finger"
+        scroll-method "two-finger"
         // disabled-on-external-mouse
     }
 
@@ -330,6 +330,12 @@ window-rule {
     open-floating true
 }
 
+// for steam
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
@@ -365,7 +371,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun -config ~/.config/rofi/launcher-theme/launcher-theme.rasi"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: gtklock" { spawn-sh "~/bin/lock.sh"; }
 
@@ -617,7 +623,7 @@ binds {
     Mod+Shift+P { power-off-monitors; }
 
     // for clipboard history removal
-    Alt+O {spawn-sh "cliphist wipe && rm -rf ~/.cache/cliphist/thumbnails"; }
+    Alt+C hotkey-overlay-title="Clear Clipboard" {spawn-sh "cliphist wipe && rm -rf ~/.cache/cliphist/thumbnails"; }
 
     // for wallpaper change
     Shift+Ctrl+W hotkey-overlay-title="Change Wallpaper" { spawn-sh "/bin/bash -c '~/bin/rofi-wallpaper.sh'"; }
