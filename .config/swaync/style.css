@@ -198,13 +198,14 @@ scrollbar trough {
 
 /* dnd */
 .widget-dnd {
-  margin-top: 5px;
+  margin-top: 25px;
   border-radius: 8px;
   font-size: 1.1rem;
 }
 
 .widget-dnd>switch {
   font-size: initial;
+  margin-top: 25px;
   border-radius: 8px;
   background: #313244;
   box-shadow: none;
@@ -216,6 +217,7 @@ scrollbar trough {
 
 .widget-dnd>switch slider {
   background: #45475a;
+  margin-top: 25px;
   border-radius: 8px;
 }
 
@@ -224,6 +226,7 @@ scrollbar trough {
   background: #313244;
   border-radius: 12.6px;
   color: #cdd6f4;
+  margin-top: 14px;
 }
 
 .mpris-overlay {
