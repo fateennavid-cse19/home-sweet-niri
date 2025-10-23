@@ -198,14 +198,13 @@ scrollbar trough {
 
 /* dnd */
 .widget-dnd {
-  margin-top: 25px;
+  margin-top: 10px;
   border-radius: 8px;
   font-size: 1.1rem;
 }
 
 .widget-dnd>switch {
   font-size: initial;
-  margin-top: 25px;
   border-radius: 8px;
   background: #313244;
   box-shadow: none;
@@ -217,7 +216,6 @@ scrollbar trough {
 
 .widget-dnd>switch slider {
   background: #45475a;
-  margin-top: 25px;
   border-radius: 8px;
 }
 
