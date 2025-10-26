@@ -273,6 +273,7 @@ spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
 spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
 spawn-at-startup "swww-daemon"
 
+
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
@@ -373,6 +374,8 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun -config ~/.config/rofi/launcher-theme/launcher-theme.rasi"; }
+    Alt+Tab  { spawn-sh "rofi -show window" ; }
+   
     Super+Alt+L hotkey-overlay-title="Lock the Screen: gtklock" { spawn-sh "~/bin/lock.sh"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
@@ -629,3 +632,5 @@ binds {
     Shift+Ctrl+W hotkey-overlay-title="Change Wallpaper" { spawn-sh "/bin/bash -c '~/bin/rofi-wallpaper.sh'"; }
     Mod+Shift+Period hotkey-overlay-title="Select Emoji" {spawn-sh "rofi -show emoji -config ~/.config/rofi/emoji-theme/emoji-theme.rasi"; } 
 }
+
+   
