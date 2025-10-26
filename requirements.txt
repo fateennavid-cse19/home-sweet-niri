@@ -1,11 +1,11 @@
-niri
+﻿niri
 waybar
 swww
 wl-clipboard
 fuzzel
 power-profiles-daemon
 wlogout
-nmtui
+nmcli
 pavucontrol
 blueman
 bluez

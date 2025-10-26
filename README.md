@@ -13,6 +13,7 @@ This configuration has drawn inspiration from the following repositories so far:
 -   **RickinShah's 0xNiri Config:** <https://github.com/rickinshah/0xNiri>
 
 -   **Rilop913's Wallpaper Switcher:** <https://github.com/Rliop913/Rofi-background-selector/tree/master>
+-   **zbaylin's rofi-wifi-menu:** <https://github.com/zbaylin/rofi-wifi-menu#> 
 
 * * * * *
 
