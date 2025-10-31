@@ -8,6 +8,7 @@
   "margin-bottom": 1,
   "reload_style_on_change": true,
   "spacing": 11,
+  "exclusive": false,
   "modules-left": ["custom/launcher", "niri/workspaces", "mpris"],
   "modules-center": ["clock", "custom/notification"],
   "modules-right": [

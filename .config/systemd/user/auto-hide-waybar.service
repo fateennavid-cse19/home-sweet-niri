@@ -1,0 +1,12 @@
+[Unit]
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+ExecStart=%h/bin/auto-hide-waybar
+Restart=on-failure
+
+[Install]
+# This section makes the 'enable' command work and starts it at login
+WantedBy=graphical-session.target

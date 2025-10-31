@@ -630,7 +630,8 @@ binds {
 
     // for wallpaper change
     Shift+Ctrl+W hotkey-overlay-title="Change Wallpaper" { spawn-sh "/bin/bash -c '~/bin/rofi-wallpaper.sh'"; }
-    Mod+Shift+Period hotkey-overlay-title="Select Emoji" {spawn-sh "rofi -show emoji -config ~/.config/rofi/emoji-theme/emoji-theme.rasi"; } 
+    Mod+Shift+Period hotkey-overlay-title="Select Emoji" {spawn-sh "rofi -show emoji -config ~/.config/rofi/emoji-theme/emoji-theme.rasi"; }
+    Mod+Shift+W hotkey-overlay-title="Toggle Waybar" {spawn-sh "/bin/bash -c '~/bin/toggle-waybar.sh'"; } 
 }
 
    
